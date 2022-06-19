@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-const alphabet = "abcdefghijklmnopqrstuvwxyz"
+const alphabets = "abcdefghijklmnopqrstuvwxyz"
 
 func init() {
 	rand.Seed(time.Now().UnixNano())
@@ -14,16 +14,16 @@ func init() {
 
 //RandomInt generates a random integer between min and max
 func Randomint(min, max int64) int64 {
-	return min + rand.Int63n(max - min + 1)
+	return min + rand.Int63n(max-min+1)
 }
 
 //RandomString generates a random string of length of n
 func RandomString(n int) string {
 	var sb strings.Builder
-	k := len(alphabet)
+	k := len(alphabets)
 
-	for i := 0; i<n; i++ {
-		c := alphabet[rand.Intn(k)]
+	for i := 0; i < n; i++ {
+		c := alphabets[rand.Intn(k)]
 		sb.WriteByte(c)
 	}
 	return sb.String()
