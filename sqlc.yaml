@@ -5,7 +5,8 @@ packages:
     queries: "./db/query/"
     schema: "./db/migration/"
     engine: "postgresql"
-    emit_json_tags: true
-    emit_prepared_queries: false
-    emit_interface: false
-    emit_exact_table_names: false
+    emit_json_tags: true #Add DB tags to generated structs
+    emit_prepared_queries: false #Support for prepared queries
+    emit_interface: true #Output a Querier interface in generated pkg
+    emit_exact_table_names: false #Name table with singular or plural
+    emit_empty_slices: true #Return empty :many slices if null
