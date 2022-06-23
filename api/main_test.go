@@ -8,6 +8,6 @@ import (
 )
 
 func TestMain(m *testing.M) {
-	gin.SetMode(testing.CoverMode())
+	gin.SetMode(gin.TestMode)
 	os.Exit(m.Run())
 }
