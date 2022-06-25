@@ -1,5 +1,5 @@
 CREATE TABLE "accounts" (
-  "id" BIGSERIAL PRIMARY KEY,
+  "id" bigserial PRIMARY KEY,
   "owner" varchar NOT NULL,
   "balance" bigint NOT NULL,
   "currency" varchar NOT NULL,
